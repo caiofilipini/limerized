@@ -1,0 +1,126 @@
+html {
+  font-family: 'Monaco';
+  font-size: 10px;
+  background-color: #002b36; /* base03 */
+  color: #839496;            /* base0 */
+  padding: 0;
+  margin: 0;
+}
+body {
+  margin: 0;
+  padding: 0.5ex 1.5ex;
+}
+body.console {}
+body.normal {
+  line-height: 3.2ex;
+}
+
+.url {
+  color: #d33682; /* magenta */
+  word-break: break-all;
+ }
+.address {}
+.highlight {
+  font-weight: bold;
+  color: #dc322f;   /* red */
+}
+
+.line {}
+.line[alternate=even] {}
+.line[alternate=odd] {}
+.line[highlight=true] {}
+
+.time { color: #586e75; }   /* base01 */
+.place { color: #586e75; }  /* base01 */
+
+.sender[type=normal] { color: #268bd2; } /* blue */
+.sender[type=myself] { color: #586e75; } /* base01 */
+
+.message[type=privmsg] {}
+.message[type=notice] { color: #859900; }   /* green */
+.message[type=action] { color: #93a1a1;}    /* base1 */
+
+.message[type=system], .message[type=join], .message[type=part], .message[type=kick],
+.message[type=quit], .message[type=kill], .message[type=nick], .message[type=mode],
+.message[type=invite], .message[type=wallops] {
+  color: #586e75; /* base01 */
+  font-size: 90%;
+}
+
+body.normal .message[type=topic] {
+  color: #6c71c4; /* violet */
+  float: right;
+  font-size: 90%;
+}
+
+.message[type=reply] { color: #2aa198; }   /* cyan */
+
+.message[type=error], .message[type=error_reply] { color: #cb4b16; } /* orange */
+.message[type=dcc_send_send] { color: #cb4b16; }                     /* orange */
+.message[type=dcc_send_receive] { color: #cb4b16; }                  /* orange */
+.message[type=debug_send] { color: #cb4b16; }                        /* orange */
+.message[type=debug_receive] { color: #cb4b16; }                     /* orange */
+
+body.normal .message[type=nick] { padding-left: 22ex; }
+
+body.normal .sender[type=normal], body.normal .sender[type=myself] {
+  color: #268bd2;
+  display: block;
+  float: left;
+  padding-right: 0.3ex;
+  text-align: right;
+  width: 20ex;
+}
+
+/* Messages in main view, but not console */
+body.normal .message[type=privmsg]          { padding-left: 22ex; display: block; }
+
+body.normal .message[type=notice]           { padding-left: 22ex; display: block; }
+body.normal .message[type=join]             { padding-left: 22ex; float: right; }
+body.normal .message[type=part]             { padding-left: 22ex; float: right; }
+body.normal .message[type=quit]             { padding-left: 22ex; float: right; }
+body.normal .message[type=kick]             { padding-left: 22ex; float: right; }
+body.normal .message[type=kill]             { padding-left: 22ex; float: right; }
+body.normal .message[type=nick]             { padding-left: 22ex; }
+body.normal .message[type=mode]             { padding-left: 22ex; float: right; }
+body.normal .message[type=topic]            { padding-left: 22ex; }
+body.normal .message[type=invite]           { padding-left: 22ex; float: right; }
+body.normal .message[type=wallops]          { padding-left: 22ex; float: right; }
+
+body.normal .message[type=system]           { padding-left: 22ex; }
+body.normal .message[type=error]            { padding-left: 22ex; }
+body.normal .message[type=reply]            { padding-left: 22ex; display: block; }
+body.normal .message[type=error_reply]      { padding-left: 22ex; }
+body.normal .message[type=dcc_send_send]    { padding-left: 22ex; }
+body.normal .message[type=dcc_send_receive] { padding-left: 22ex; }
+
+body.normal .message[type=debug_send]       { padding-left: 22ex; }
+body.normal .message[type=debug_receive]    { padding-left: 22ex; }
+
+body.normal .time {
+  display: block;
+  float: right;
+  padding-left: 1ex;
+  visibility: hidden;
+}
+body.normal .line:hover .time {
+  visibility: visible;
+}
+
+body.normal div.line[type=action] .sender[type=normal], div.line[type=action] .sender[type=myself] {
+  width: auto;
+  padding-left: 19ex;
+  margin-right: 1ex;
+  color: #8996a8;
+  background-color: transparent;
+}
+
+body.normal div.line[type=action] .sender[type=normal]::before, div.line[type=action] .sender[type=myself]::before {
+  content: "•";
+  padding-right: 1.5ex;
+}
+
+body.normal .sender[type=myself]:after {
+  content: " ★";
+  color: #6e7b8d;
+}
