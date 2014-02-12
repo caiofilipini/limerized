@@ -3,7 +3,7 @@ limerized
 
 A [LimeChat](http://limechat.net/mac/) theme that combines [Solarized Dark](http://ethanschoonover.com/solarized) colors and [Limelight](http://projects.serenity.de/limelight/) styling.
 
-[![](screenshot-preview.png?raw=true)](screenshot.png?raw=true)
+![](screenshot.png?raw=true)
 
 ## Background
 
