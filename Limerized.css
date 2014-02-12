@@ -63,6 +63,10 @@ body.normal .message[type=topic] {
 
 body.normal .message[type=nick] { padding-left: 22ex; }
 
+body.console .sender[type=normal] {
+  padding-right: 1ex;
+}
+
 body.normal .sender[type=normal], body.normal .sender[type=myself] {
   color: #268bd2;
   display: block;
