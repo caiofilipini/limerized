@@ -120,7 +120,11 @@ body.normal div.line[type=action] .sender[type=normal]::before, div.line[type=ac
   padding-right: 1.5ex;
 }
 
+body.normal .sender[type=myself] {
+  color: #6c71c4;
+}
+
 body.normal .sender[type=myself]:after {
   content: " ★";
-  color: #6e7b8d;
+  color: #6c71c4;
 }
